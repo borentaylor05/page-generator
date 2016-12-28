@@ -23,6 +23,8 @@ var args = {
 
 if (!fs.existsSync('pages/' + name)){
     fs.mkdirSync('pages/' + name);
+} else {
+  throw new Error('Directory with name ' + name + ' already exists.');
 }
 
 fs.readFile(__dirname + '/templates/model.mustache.js', 'utf8', function (err, template) {
