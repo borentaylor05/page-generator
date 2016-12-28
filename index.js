@@ -21,8 +21,8 @@ var args = {
   varName: process.argv[2].lowerFirst()
 };
 
-if (!fs.existsSync('pages/' + name)){
-    fs.mkdirSync('pages/' + name);
+if (!fs.existsSync('src/pages/' + name)){
+    fs.mkdirSync('src/pages/' + name);
 } else {
   throw new Error('Directory with name ' + name + ' already exists.');
 }
