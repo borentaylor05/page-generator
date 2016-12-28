@@ -1,12 +1,12 @@
 {
-  "name": "page-generator",
+  "name": "galvanize-dotcom-page-generator",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple page generator for Dotcom",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Taylor Boren <taylor.boren@galvanize.com>",
   "license": "ISC",
   "dependencies": {
     "mustache": "^2.3.0"
