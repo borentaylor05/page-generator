@@ -29,20 +29,20 @@ if (!fs.existsSync('pages/' + name)){
 
 fs.readFile(__dirname + '/templates/model.mustache.js', 'utf8', function (err, template) {
   var html = Mustache.to_html(template, args);
-  fs.writeFile('./pages/' + name + '/' + process.argv[2].toDash() + '.model.js', html);
+  fs.writeFile('./src/pages/' + name + '/' + process.argv[2].toDash() + '.model.js', html);
 });
 
 fs.readFile(__dirname + '/templates/view.mustache.js', 'utf8', function (err, template) {
   var html = Mustache.to_html(template, args);
-  fs.writeFile('./pages/' + name + '/' + process.argv[2].toDash() + '.view.js', html);
+  fs.writeFile('./src/pages/' + name + '/' + process.argv[2].toDash() + '.view.js', html);
 });
 
 fs.readFile(__dirname + '/templates/jsx.mustache.js', 'utf8', function (err, template) {
   var html = Mustache.to_html(template, args);
-  fs.writeFile('./pages/' + name + '/' + process.argv[2].toDash() + '.jsx', html);
+  fs.writeFile('./src/pages/' + name + '/' + process.argv[2].toDash() + '.jsx', html);
 });
 
 fs.readFile(__dirname + '/templates/controller.mustache.js', 'utf8', function (err, template) {
   var html = Mustache.to_html(template, args);
-  fs.writeFile('./pages/' + name + '/' + process.argv[2].toDash() + '.controller.js', html);
+  fs.writeFile('./src/pages/' + name + '/' + process.argv[2].toDash() + '.controller.js', html);
 });
