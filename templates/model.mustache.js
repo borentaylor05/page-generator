@@ -1,15 +1,16 @@
 'use strict';
 
 import Page from '../page.model';
+const PAGE_ID = 'a contentful id';
 
 class {{ name }} extends Page {
-  constructor(location) {
-    super(_getLocationContentfulId(location)); // you may need course and location args tpp
+  constructor() {
+    super(PAGE_ID); // you may need course and location args tpp
+  }
+
+  get dataSources() {
+    return [this.contentful.getInfoPageById(PAGE_ID)];
   }
 }
 
 export default {{ name }};
-
-function _getLocationContentfulId(location) {
-  return; // a contentful id for this page
-}
